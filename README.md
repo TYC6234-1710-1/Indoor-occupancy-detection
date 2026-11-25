@@ -8,9 +8,9 @@
 - [x] 训练文件按时间划分训练集与验证集，并保存划分清单。
 - [x] 光照阈值、逻辑回归、随机森林的首轮比较。
 - [x] 保存验证配置、两个测试集及合并评价、逐条预测和比较图。
-- [ ] 光照、CO₂、组合与全部特征的对比实验。
-- [ ] 连续时段图、误报漏报及环境变化滞后分析。
-- [ ] 生成课程要求的 `occupancy_predictions.csv`。
+- [x] 光照、CO₂、组合与全部特征的对比实验。
+- [x] 连续时段图、误报漏报及环境变化的事后事件分析。
+- [x] 生成课程要求的 `occupancy_predictions.csv` 并独立核验。
 - [ ] 完成最终报告与提交核对。
 
 ## 数据与实验约定
@@ -30,9 +30,13 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe step01_check_data.py
 .\.venv\Scripts\python.exe step02_compare_models.py
+.\.venv\Scripts\python.exe run_complete_experiment.py
+.\.venv\Scripts\python.exe validate_submission.py
 ```
 
 若默认 `python` 不可用，请使用正常安装的 Python 可执行文件的完整路径创建环境。本项目虚拟环境不上传仓库。
+
+`run_complete_experiment.py` 会重新执行第一轮模型比较，再补齐特征对比和分析，因此完整重跑时可以省略单独运行 `step02_compare_models.py`。
 
 ## 文件说明
 
@@ -41,12 +45,28 @@ python -m venv .venv
 - `outputs/step02/experiment.json`：含全部候选参数的验证成绩、最终测试指标、软件版本、随机种子和运行耗时。
 - `outputs/step02/predictions.json`：三个方法的37,251条预测记录。规则的 `score` 为0/1输出，其余方法为估计概率；该文件暂未转换为最终提交CSV。
 - `数据来源与说明.md`：题目要求与数据字段。
+- `run_complete_experiment.py`：完整实验入口，结果保存至 `outputs/complete/`。
+- `validate_submission.py`：使用原始数据独立检查预测覆盖、唯一性、标签、概率与指标计算。
+- `outputs/complete/occupancy_predictions.csv`：最终格式预测文件，共6种方法，每方法12,417条，共74,502条记录。
+- `docs/实验结果与分析.md`：实验方法、结果解释及局限，可作为最终报告的内容基础。
 
 ## 第一轮结果
 
 逻辑回归在两个测试集的F1分别约为0.969和0.964。本轮两个测试集合并后的F1约为0.966。光照规则在第二个测试集产生451次误报，逻辑回归为52次，但后者漏报更多。上述结果为首轮实验，尚未完成特征对比与误差归因。
 
 ![两个测试集的模型F1比较](outputs/step02/model_comparison.png)
+
+## 完整实验结果
+
+本轮按预先确定的光照、CO₂、两者组合、全部特征进行比较，各组逻辑回归均在相同验证集上从 `C=0.1,1,10` 中选参数。概率阈值保持0.5，没有根据测试结果增加调参。
+
+光照与CO₂组合的两个测试F1约为0.971、0.984，合并F1约为0.980；仅光照合并F1约为0.977，仅CO₂约为0.622。组合在合并测试上表现最高，但验证集并未将其排为第一，因此不能将其表述为通过验证选出的最终冠军，也不能据此断言跨房间最优。所有方法均保留在预测文件中。
+
+切换后10分钟内的误判更集中。严格筛选的独立事件只有1次进入和11次离开，因此只给出描述性环境变化曲线，不估计固定的生理或通风响应滞后。误报成因也不能仅凭光照值确定。
+
+![特征与方法对比](outputs/complete/feature_comparison.png)
+
+完整分析见 [实验结果与分析](docs/实验结果与分析.md)。预测文件通过独立核验，记录见 `outputs/complete/validation.json`。最终报告尚待整理为课程提交版。
 
 ## 数据来源与署名
 

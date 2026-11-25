@@ -27,7 +27,8 @@ def metrics(y, pred):
     tn, fp, fn, tp = confusion_matrix(y, pred, labels=[0, 1]).ravel()
     return dict(n=len(y), precision=float(precision_score(y, pred, zero_division=0)),
                 recall=float(recall_score(y, pred, zero_division=0)),
-                f1=float(f1_score(y, pred, zero_division=0)), fpr=float(fp / (fp + tn)),
+                f1=float(f1_score(y, pred, zero_division=0)),
+                fpr=float(fp / (fp + tn)) if fp + tn else None,
                 tn=int(tn), fp=int(fp), fn=int(fn), tp=int(tp))
 
 

@@ -1,0 +1,604 @@
+{
+  "features": {
+    "light": [
+      "Light"
+    ],
+    "co2": [
+      "CO2"
+    ],
+    "light_co2": [
+      "Light",
+      "CO2"
+    ]
+  },
+  "trials": [
+    {
+      "method": "lr_light",
+      "C": 0.1,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9915110356536503,
+        "recall": 0.9931972789115646,
+        "f1": 0.9923534409515717,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 4,
+        "tp": 584
+      }
+    },
+    {
+      "method": "lr_light",
+      "C": 1,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9914965986394558,
+        "recall": 0.9914965986394558,
+        "f1": 0.9914965986394558,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 5,
+        "tp": 583
+      }
+    },
+    {
+      "method": "lr_light",
+      "C": 10,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9914965986394558,
+        "recall": 0.9914965986394558,
+        "f1": 0.9914965986394558,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 5,
+        "tp": 583
+      }
+    },
+    {
+      "method": "lr_co2",
+      "C": 0.1,
+      "validation": {
+        "n": 1629,
+        "precision": 0.6997282608695652,
+        "recall": 0.8758503401360545,
+        "f1": 0.7779456193353474,
+        "fpr": 0.21229586935638808,
+        "tn": 820,
+        "fp": 221,
+        "fn": 73,
+        "tp": 515
+      }
+    },
+    {
+      "method": "lr_co2",
+      "C": 1,
+      "validation": {
+        "n": 1629,
+        "precision": 0.699594046008119,
+        "recall": 0.8792517006802721,
+        "f1": 0.7792012057272042,
+        "fpr": 0.2132564841498559,
+        "tn": 819,
+        "fp": 222,
+        "fn": 71,
+        "tp": 517
+      }
+    },
+    {
+      "method": "lr_co2",
+      "C": 10,
+      "validation": {
+        "n": 1629,
+        "precision": 0.699594046008119,
+        "recall": 0.8792517006802721,
+        "f1": 0.7792012057272042,
+        "fpr": 0.2132564841498559,
+        "tn": 819,
+        "fp": 222,
+        "fn": 71,
+        "tp": 517
+      }
+    },
+    {
+      "method": "lr_light_co2",
+      "C": 0.1,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9446366782006921,
+        "recall": 0.9285714285714286,
+        "f1": 0.9365351629502573,
+        "fpr": 0.03073967339097022,
+        "tn": 1009,
+        "fp": 32,
+        "fn": 42,
+        "tp": 546
+      }
+    },
+    {
+      "method": "lr_light_co2",
+      "C": 1,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9734982332155477,
+        "recall": 0.9370748299319728,
+        "f1": 0.9549393414211439,
+        "fpr": 0.01440922190201729,
+        "tn": 1026,
+        "fp": 15,
+        "fn": 37,
+        "tp": 551
+      }
+    },
+    {
+      "method": "lr_light_co2",
+      "C": 10,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9804270462633452,
+        "recall": 0.9370748299319728,
+        "f1": 0.9582608695652174,
+        "fpr": 0.010566762728146013,
+        "tn": 1030,
+        "fp": 11,
+        "fn": 37,
+        "tp": 551
+      }
+    }
+  ],
+  "selections": {
+    "lr_light": {
+      "features": [
+        "Light"
+      ],
+      "C": 0.1,
+      "probability_threshold": 0.5,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9915110356536503,
+        "recall": 0.9931972789115646,
+        "f1": 0.9923534409515717,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 4,
+        "tp": 584
+      },
+      "refit_coefficients_original_units": {
+        "Light": 0.019611291088527414
+      },
+      "refit_intercept_original_units": -6.694570754204083,
+      "refit_probability_0_5_boundary": 341.3630812976102
+    },
+    "lr_co2": {
+      "features": [
+        "CO2"
+      ],
+      "C": 1,
+      "probability_threshold": 0.5,
+      "validation": {
+        "n": 1629,
+        "precision": 0.699594046008119,
+        "recall": 0.8792517006802721,
+        "f1": 0.7792012057272042,
+        "fpr": 0.2132564841498559,
+        "tn": 819,
+        "fp": 222,
+        "fn": 71,
+        "tp": 517
+      },
+      "refit_coefficients_original_units": {
+        "CO2": 0.007956188896017695
+      },
+      "refit_intercept_original_units": -6.568449798158188,
+      "refit_probability_0_5_boundary": 825.577406972563
+    },
+    "lr_light_co2": {
+      "features": [
+        "Light",
+        "CO2"
+      ],
+      "C": 10,
+      "probability_threshold": 0.5,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9804270462633452,
+        "recall": 0.9370748299319728,
+        "f1": 0.9582608695652174,
+        "fpr": 0.010566762728146013,
+        "tn": 1030,
+        "fp": 11,
+        "fn": 37,
+        "tp": 551
+      },
+      "refit_coefficients_original_units": {
+        "Light": 0.018383391596608727,
+        "CO2": 0.004086769377114766
+      },
+      "refit_intercept_original_units": -9.242081766766603
+    }
+  },
+  "baseline_selections": {
+    "light_rule": {
+      "threshold": 177.0383333333325,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9898819561551433,
+        "recall": 0.9982993197278912,
+        "f1": 0.9940728196443692,
+        "fpr": 0.005763688760806916,
+        "tn": 1035,
+        "fp": 6,
+        "fn": 1,
+        "tp": 587
+      }
+    },
+    "logistic": {
+      "config": {
+        "C": 1
+      },
+      "probability_threshold": 0.5,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9559859154929577,
+        "recall": 0.923469387755102,
+        "f1": 0.9394463667820069,
+        "fpr": 0.024015369836695485,
+        "tn": 1016,
+        "fp": 25,
+        "fn": 45,
+        "tp": 543
+      }
+    },
+    "random_forest": {
+      "config": {
+        "max_depth": 5,
+        "min_samples_leaf": 1
+      },
+      "probability_threshold": 0.5,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9915397631133672,
+        "recall": 0.9965986394557823,
+        "f1": 0.9940627650551315,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 2,
+        "tp": 586
+      }
+    }
+  },
+  "results": [
+    {
+      "dataset": "datatest.txt",
+      "method": "light_rule",
+      "n": 2665,
+      "precision": 0.9364161849710982,
+      "recall": 1.0,
+      "f1": 0.9671641791044776,
+      "fpr": 0.03898405197873597,
+      "tn": 1627,
+      "fp": 66,
+      "fn": 0,
+      "tp": 972
+    },
+    {
+      "dataset": "datatest.txt",
+      "method": "lr_light",
+      "n": 2665,
+      "precision": 0.9472140762463344,
+      "recall": 0.9969135802469136,
+      "f1": 0.9714285714285714,
+      "fpr": 0.0318960425280567,
+      "tn": 1639,
+      "fp": 54,
+      "fn": 3,
+      "tp": 969
+    },
+    {
+      "dataset": "datatest.txt",
+      "method": "lr_co2",
+      "n": 2665,
+      "precision": 0.8584371460928653,
+      "recall": 0.779835390946502,
+      "f1": 0.8172506738544474,
+      "fpr": 0.07383343177790903,
+      "tn": 1568,
+      "fp": 125,
+      "fn": 214,
+      "tp": 758
+    },
+    {
+      "dataset": "datatest.txt",
+      "method": "lr_light_co2",
+      "n": 2665,
+      "precision": 0.9462890625,
+      "recall": 0.9969135802469136,
+      "f1": 0.9709418837675351,
+      "fpr": 0.032486709982279975,
+      "tn": 1638,
+      "fp": 55,
+      "fn": 3,
+      "tp": 969
+    },
+    {
+      "dataset": "datatest.txt",
+      "method": "logistic",
+      "n": 2665,
+      "precision": 0.9470068694798822,
+      "recall": 0.992798353909465,
+      "f1": 0.9693621295831241,
+      "fpr": 0.0318960425280567,
+      "tn": 1639,
+      "fp": 54,
+      "fn": 7,
+      "tp": 965
+    },
+    {
+      "dataset": "datatest.txt",
+      "method": "random_forest",
+      "n": 2665,
+      "precision": 0.9461697722567288,
+      "recall": 0.9403292181069959,
+      "f1": 0.9432404540763674,
+      "fpr": 0.03071470761961016,
+      "tn": 1641,
+      "fp": 52,
+      "fn": 58,
+      "tp": 914
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "light_rule",
+      "n": 9752,
+      "precision": 0.8193832599118943,
+      "recall": 0.9985358711566618,
+      "f1": 0.9001319841619005,
+      "fpr": 0.05854861742178372,
+      "tn": 7252,
+      "fp": 451,
+      "fn": 3,
+      "tp": 2046
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "lr_light",
+      "n": 9752,
+      "precision": 0.965419232591189,
+      "recall": 0.9946315275744265,
+      "f1": 0.9798076923076923,
+      "fpr": 0.009476827210177853,
+      "tn": 7630,
+      "fp": 73,
+      "fn": 11,
+      "tp": 2038
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "lr_co2",
+      "n": 9752,
+      "precision": 0.49436846339501206,
+      "recall": 0.5998047828208882,
+      "f1": 0.5420066152149945,
+      "fpr": 0.16318317538621316,
+      "tn": 6446,
+      "fp": 1257,
+      "fn": 820,
+      "tp": 1229
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "lr_light_co2",
+      "n": 9752,
+      "precision": 0.9732569245463228,
+      "recall": 0.9946315275744265,
+      "f1": 0.9838281438571084,
+      "fpr": 0.007269894846163832,
+      "tn": 7647,
+      "fp": 56,
+      "fn": 11,
+      "tp": 2038
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "logistic",
+      "n": 9752,
+      "precision": 0.9741035856573705,
+      "recall": 0.9546120058565154,
+      "f1": 0.9642593049051023,
+      "fpr": 0.0067506166428664156,
+      "tn": 7651,
+      "fp": 52,
+      "fn": 93,
+      "tp": 1956
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "random_forest",
+      "n": 9752,
+      "precision": 0.9647404505386875,
+      "recall": 0.961444607125427,
+      "f1": 0.9630897091175752,
+      "fpr": 0.009347007659353498,
+      "tn": 7631,
+      "fp": 72,
+      "fn": 79,
+      "tp": 1970
+    },
+    {
+      "dataset": "pooled",
+      "method": "light_rule",
+      "n": 12417,
+      "precision": 0.8537482319660538,
+      "recall": 0.9990069513406157,
+      "f1": 0.9206833435021354,
+      "fpr": 0.05502341421881652,
+      "tn": 8879,
+      "fp": 517,
+      "fn": 3,
+      "tp": 3018
+    },
+    {
+      "dataset": "pooled",
+      "method": "lr_light",
+      "n": 12417,
+      "precision": 0.9594767070835992,
+      "recall": 0.9953657729228732,
+      "f1": 0.9770917952883834,
+      "fpr": 0.013516389953171563,
+      "tn": 9269,
+      "fp": 127,
+      "fn": 14,
+      "tp": 3007
+    },
+    {
+      "dataset": "pooled",
+      "method": "lr_co2",
+      "n": 12417,
+      "precision": 0.5897892549718017,
+      "recall": 0.6577292287322078,
+      "f1": 0.6219092331768388,
+      "fpr": 0.14708386547467006,
+      "tn": 8014,
+      "fp": 1382,
+      "fn": 1034,
+      "tp": 1987
+    },
+    {
+      "dataset": "pooled",
+      "method": "lr_light_co2",
+      "n": 12417,
+      "precision": 0.9644002565747274,
+      "recall": 0.9953657729228732,
+      "f1": 0.9796383775859261,
+      "fpr": 0.01181353767560664,
+      "tn": 9285,
+      "fp": 111,
+      "fn": 14,
+      "tp": 3007
+    },
+    {
+      "dataset": "pooled",
+      "method": "logistic",
+      "n": 12417,
+      "precision": 0.9649818301949125,
+      "recall": 0.966898378020523,
+      "f1": 0.9659391534391535,
+      "fpr": 0.011281396338867603,
+      "tn": 9290,
+      "fp": 106,
+      "fn": 100,
+      "tp": 2921
+    },
+    {
+      "dataset": "pooled",
+      "method": "random_forest",
+      "n": 12417,
+      "precision": 0.9587765957446809,
+      "recall": 0.9546507778881165,
+      "f1": 0.9567092386797147,
+      "fpr": 0.01319710515112814,
+      "tn": 9272,
+      "fp": 124,
+      "fn": 137,
+      "tp": 2884
+    }
+  ],
+  "transition_counts": [
+    {
+      "source_file": "datatraining.txt",
+      "direction": "entry",
+      "total": 20,
+      "eligible": 0
+    },
+    {
+      "source_file": "datatest.txt",
+      "direction": "entry",
+      "total": 13,
+      "eligible": 0
+    },
+    {
+      "source_file": "datatest2.txt",
+      "direction": "entry",
+      "total": 24,
+      "eligible": 1
+    },
+    {
+      "source_file": "datatraining.txt",
+      "direction": "exit",
+      "total": 20,
+      "eligible": 3
+    },
+    {
+      "source_file": "datatest.txt",
+      "direction": "exit",
+      "total": 13,
+      "eligible": 1
+    },
+    {
+      "source_file": "datatest2.txt",
+      "direction": "exit",
+      "total": 24,
+      "eligible": 7
+    }
+  ],
+  "training_only_correlation": {
+    "features": [
+      "Temperature",
+      "Humidity",
+      "Light",
+      "CO2",
+      "HumidityRatio"
+    ],
+    "matrix": [
+      [
+        0.9999999999999998,
+        -0.35502028573161654,
+        0.6603812548154442,
+        0.6605610587321001,
+        0.03802370414706151
+      ],
+      [
+        -0.35502028573161654,
+        1.0,
+        -0.12916244167521987,
+        0.03027315561376003,
+        0.9183607195418294
+      ],
+      [
+        0.6603812548154443,
+        -0.12916244167521987,
+        1.0,
+        0.8076553775263767,
+        0.1345457361393886
+      ],
+      [
+        0.6605610587321002,
+        0.030273155613760032,
+        0.8076553775263767,
+        1.0,
+        0.32655010138201007
+      ],
+      [
+        0.03802370414706151,
+        0.9183607195418294,
+        0.1345457361393886,
+        0.32655010138201007,
+        1.0
+      ]
+    ]
+  },
+  "protocol": "Predefined feature comparison; C in [0.1,1,10] selected by validation F1. Test results are descriptive; no test-driven search.",
+  "limitations": [
+    "Test outcomes were observed in prior step; this is not a new blind test.",
+    "Single room; adjacent minute samples are dependent. No IID confidence intervals.",
+    "Transition profiles use future observations for retrospective analysis only; no causal lag estimate."
+  ],
+  "elapsed_seconds": 4.768051300001389,
+  "python": "3.14.9",
+  "predictions_count": 74502,
+  "unique_keys_verified": true
+}

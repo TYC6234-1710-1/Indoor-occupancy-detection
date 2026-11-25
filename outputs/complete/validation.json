@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "methods": [
+    "light_rule",
+    "logistic",
+    "lr_co2",
+    "lr_light",
+    "lr_light_co2",
+    "random_forest"
+  ],
+  "rows_per_method": 12417,
+  "total_rows": 74502,
+  "checks": [
+    "exact sample coverage",
+    "unique identifiers",
+    "true labels and timestamps",
+    "finite scores and classification threshold",
+    "confusion counts",
+    "independently recomputed per-file and pooled metrics"
+  ]
+}
