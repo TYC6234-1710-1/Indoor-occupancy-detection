@@ -1,0 +1,238 @@
+{
+  "report": "reports/室内占用检测课程项目实验报告.docx",
+  "predictions": "outputs/complete/occupancy_predictions.csv",
+  "predictions_per_method": 12417,
+  "total_predictions": 74502,
+  "files": [
+    {
+      "path": "build_course_report.py",
+      "bytes": 20050,
+      "sha256": "35b8a25c8bad40691146a04f64a53256dd97851885a3a1d0fdff176fb6cbdefb"
+    },
+    {
+      "path": "data/datatest.txt",
+      "bytes": 200766,
+      "sha256": "1b92c7c1b2838963464fa891a610cf3c5db4becb7189189b29b330107a584c7f"
+    },
+    {
+      "path": "data/datatest2.txt",
+      "bytes": 699664,
+      "sha256": "d026d1bd5aeccd4aff4f3b3710d48e40613bd5fc370db7e61bbdcaa50d985095"
+    },
+    {
+      "path": "data/datatraining.txt",
+      "bytes": 596674,
+      "sha256": "b2c4d0ce2b9e4e453c476f7125ef31aeec2d1f5c7f5572d0e80de3df6521ab56"
+    },
+    {
+      "path": "docs/实验结果与分析.md",
+      "bytes": 9155,
+      "sha256": "96b59f5adcd37c3a0301b9ae692a1bc9e4f51f77da1fcdb9afaabaf4501ccd44"
+    },
+    {
+      "path": "docs/提交说明.md",
+      "bytes": 1694,
+      "sha256": "9ee8318dba0e2131e6a52a3aa76f2c8978e9807210e47ef10df8811fbb0a5229"
+    },
+    {
+      "path": "outputs/complete/error_episodes.csv",
+      "bytes": 36218,
+      "sha256": "21e9e2bd70b460938ffeab18f413907d03f658bc1b6d394a521e867cdfd78961"
+    },
+    {
+      "path": "outputs/complete/error_slices.csv",
+      "bytes": 4492,
+      "sha256": "3471cddc6a6360995a77675f7f7d59799fec55f405daf01047c45a60000b6326"
+    },
+    {
+      "path": "outputs/complete/experiment.json",
+      "bytes": 14301,
+      "sha256": "3cd5bcc761876c84ee3da6c8731e582422e3e871b907285d847cc16e66c6c4cd"
+    },
+    {
+      "path": "outputs/complete/feature_comparison.png",
+      "bytes": 58937,
+      "sha256": "4f6b23da8e329cc39755a0b101845ab982a6c14fc28ee36d8edd9448e326cedb"
+    },
+    {
+      "path": "outputs/complete/feature_comparison.svg",
+      "bytes": 41848,
+      "sha256": "6e7b2dd57b9e0f2494c5dec8f82d54a19df6ec5b94918e8b3961a8c0e9a23bf0"
+    },
+    {
+      "path": "outputs/complete/feature_distributions.csv",
+      "bytes": 3535,
+      "sha256": "063d12f0996bdd3fa847110e7bbbdc28b1d3fa079b8ffb2747561c77f3830a7a"
+    },
+    {
+      "path": "outputs/complete/metrics.csv",
+      "bytes": 2224,
+      "sha256": "0f3458e78c6f95d497795fc5dc19bccf67c20fc50467858ec77cc6c2a79f8c02"
+    },
+    {
+      "path": "outputs/complete/occupancy_predictions.csv",
+      "bytes": 5349513,
+      "sha256": "658678ec74af2bebf15b436b9faff31805227898904ed2cc40a41fce1d265b1b"
+    },
+    {
+      "path": "outputs/complete/timeline_datatest2_full.png",
+      "bytes": 157794,
+      "sha256": "a4dc1494ea6166457f45d6c761de2b412bc35826e5df8b06f2060e5837751c13"
+    },
+    {
+      "path": "outputs/complete/timeline_datatest2_full.svg",
+      "bytes": 254963,
+      "sha256": "3128ece37cfdccc15e7f4b8418be538d91aafd910501d11d0314f50fc242dc71"
+    },
+    {
+      "path": "outputs/complete/timeline_datatest2_second_day.png",
+      "bytes": 149712,
+      "sha256": "41477f3ace3c34ba1b759faa9d01dfd46e4af6547fa691f5bdeabf92517c1f4a"
+    },
+    {
+      "path": "outputs/complete/timeline_datatest2_second_day.svg",
+      "bytes": 94339,
+      "sha256": "72901b3279691729273a524ae9a30c954963d89b10138145b5a5a757b52ae444"
+    },
+    {
+      "path": "outputs/complete/timeline_datatest_full.png",
+      "bytes": 144454,
+      "sha256": "876c344225e47e13f8873149efc2cc229d5f0b1e828ce4a79eb385cbe1743312"
+    },
+    {
+      "path": "outputs/complete/timeline_datatest_full.svg",
+      "bytes": 120332,
+      "sha256": "9617cf308c9c2341f9cee088cca8ccee490246e63f15ff17ad8b780ea7cdf26c"
+    },
+    {
+      "path": "outputs/complete/timeline_datatest_second_day.png",
+      "bytes": 146106,
+      "sha256": "349295b94223ad4abf9544e8e86ff8ee60db2ff892562853924e42cb8cc4abe5"
+    },
+    {
+      "path": "outputs/complete/timeline_datatest_second_day.svg",
+      "bytes": 91950,
+      "sha256": "e9a86ef94ab802905bcc9dbcb418b03c781f5519a0409eea8bb612157f2f9fdc"
+    },
+    {
+      "path": "outputs/complete/transition_events.csv",
+      "bytes": 922,
+      "sha256": "2b5c414a3c9bf965fc4c0d9dbbda7d4ddabd1758ea71467ff505133a0655cc1b"
+    },
+    {
+      "path": "outputs/complete/transition_profiles.json",
+      "bytes": 13884,
+      "sha256": "332659fa19afc7395472c09cb9d7006d62e65ba24c8d29033c6dadc3f93005d8"
+    },
+    {
+      "path": "outputs/complete/transition_profiles.png",
+      "bytes": 169403,
+      "sha256": "73654c815212d2c0d539251ccabb51e22c1474f11a046f0ea4575e674eee0af3"
+    },
+    {
+      "path": "outputs/complete/transition_profiles.svg",
+      "bytes": 90636,
+      "sha256": "71b532bfe7c43e05ff1fa25fc1ae19ff5ff4f7b4cac86d7dc53ac8919a354ea3"
+    },
+    {
+      "path": "outputs/complete/validation.json",
+      "bytes": 456,
+      "sha256": "ec4a57fa980db4939ecff9988e8a8aa06449687501128edc2b42cd9295ffde52"
+    },
+    {
+      "path": "outputs/step01/data_check.json",
+      "bytes": 1556,
+      "sha256": "eaeb8b8d4c8b6ab320298690bcfbe4eddfefde4b71c448cc2eb5f002c8eeec9c"
+    },
+    {
+      "path": "outputs/step01/split_manifest.json",
+      "bytes": 3341820,
+      "sha256": "b9401192030eee7855eef9e58a6d38bdec5622ac3bb28c5f3f9cee89c84d905f"
+    },
+    {
+      "path": "outputs/step02/experiment.json",
+      "bytes": 7211,
+      "sha256": "38999af10d913ddeb63d2ed7aebd155743bd81627c97e2db87558b95346b9e5f"
+    },
+    {
+      "path": "outputs/step02/model_comparison.png",
+      "bytes": 51934,
+      "sha256": "37ee22c9db98ec5a1c8a23d948c1b87c44a6e094ca5b5090e1eb17ad5a8950e8"
+    },
+    {
+      "path": "outputs/step02/predictions.json",
+      "bytes": 6550705,
+      "sha256": "be26d942cb132e5745d12216a146dc21d136d56453e7c66920f5354464f4ee56"
+    },
+    {
+      "path": "outputs/step02/selected_configs.json",
+      "bytes": 1083,
+      "sha256": "e6f22ba6d369fa0b7986bdb771dd3bc8c09926dc019c4bc8aade9daac9f94456"
+    },
+    {
+      "path": "package_submission.py",
+      "bytes": 2899,
+      "sha256": "4eb5c430e812f80cd56cbfcc00b9e447ac3a1652e100b4935af04f59714d4320"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6546,
+      "sha256": "2eb78c755e4e58107643f1249e1e7fb773974e0d7dd8ceed2b4d337119a62b48"
+    },
+    {
+      "path": "reports/report_review.json",
+      "bytes": 622,
+      "sha256": "4eb63210e7a41e573d3b7f02eb17ff61c330f20ebcb40fd34966232d8fbb1f1c"
+    },
+    {
+      "path": "reports/室内占用检测课程项目实验报告.docx",
+      "bytes": 392027,
+      "sha256": "41826440ab77d2ab1060bad71279e9b45a2e3c2579d4242782ae6d8b077840c5"
+    },
+    {
+      "path": "requirements-report.txt",
+      "bytes": 188,
+      "sha256": "a396c624d1efac72a645e4b31e26bf5897403c8d6b04cd0a7d080bb415d59bbb"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 70,
+      "sha256": "f18193d03ee14baf7a2af883ce670572c87a113ed35d4f79d0b0aa0c2b9b8ac2"
+    },
+    {
+      "path": "run_complete_experiment.py",
+      "bytes": 14892,
+      "sha256": "ff28a1eda2082eabd32f71d5c188480da6f3f0518c9f3b1febe4f3ab211cbba7"
+    },
+    {
+      "path": "step01_check_data.py",
+      "bytes": 3840,
+      "sha256": "4f97a25f68636ea3a542aac1302bc5d4b819c8cabf569983b7cbd511a3ebdaff"
+    },
+    {
+      "path": "step02_compare_models.py",
+      "bytes": 6177,
+      "sha256": "fb3a8185d2b2c94824b7f66a3242ef72adc863160f894ede0a1d823afee6939d"
+    },
+    {
+      "path": "validate_submission.py",
+      "bytes": 2923,
+      "sha256": "2dc299c4118a202f4342a10674fa9ba49d851e952b8e965fbeb8d586a155c473"
+    },
+    {
+      "path": "数据来源与说明.md",
+      "bytes": 4110,
+      "sha256": "b93c75018bd40512f49be9236a956d5dab3b6c50154ff998c3838f46ae1215de"
+    },
+    {
+      "path": "文件核验.json",
+      "bytes": 2861,
+      "sha256": "b113cfe4e4ef7c8f15f90f130677d7ee1501626543d026d3eafd244f1dba8388"
+    },
+    {
+      "path": "许可与署名.txt",
+      "bytes": 339,
+      "sha256": "10a0f0830a59efa03405c688bf9311e919bd99669a2c7436a81505c002a14118"
+    }
+  ]
+}

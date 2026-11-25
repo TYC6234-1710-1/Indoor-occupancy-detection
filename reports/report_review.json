@@ -1,0 +1,24 @@
+{
+  "report_sha256": "41826440ab77d2ab1060bad71279e9b45a2e3c2579d4242782ae6d8b077840c5",
+  "page_count": 8,
+  "reviewed_all_pages": true,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "renderer": "LibreOffice 26.8.3; bundled render_docx.py and Poppler",
+  "checks": [
+    "Chinese glyphs visually inspected",
+    "all tables and figures fit pages",
+    "no clipped rows or overlapping text",
+    "page numbering checked; eight section headings verified in DOCX",
+    "title decoration removed",
+    "report tables generated from verified experiment files"
+  ]
+}

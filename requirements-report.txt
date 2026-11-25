@@ -1,0 +1,4 @@
+# Report generation only; experimental dependencies remain in requirements.txt.
+python-docx>=1.1,<2
+Pillow>=10
+# Visual QA uses LibreOffice and Poppler through the bundled render_docx.py.

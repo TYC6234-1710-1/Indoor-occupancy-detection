@@ -19,3 +19,9 @@ Thumbs.db
 # Duplicate source archive and downloaded source webpage
 data/*.zip
 来源文件/
+
+# Local document rendering tools and page previews
+.tools/
+reports/_qa/
+reports/_tmp/
+deliverables/*.zip
