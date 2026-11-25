@@ -1,0 +1,311 @@
+{
+  "python": "3.14.9",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.5",
+  "features": [
+    "Temperature",
+    "Humidity",
+    "Light",
+    "CO2",
+    "HumidityRatio"
+  ],
+  "seed": 42,
+  "selection_metric": "validation F1",
+  "score_note": "light_rule score is binary rule output; other scores are estimated probabilities",
+  "trials": [
+    {
+      "method": "logistic",
+      "config": {
+        "C": 0.1
+      },
+      "validation": {
+        "n": 1629,
+        "precision": 0.9439579684763573,
+        "recall": 0.9166666666666666,
+        "f1": 0.9301121656600517,
+        "fpr": 0.03073967339097022,
+        "tn": 1009,
+        "fp": 32,
+        "fn": 49,
+        "tp": 539
+      }
+    },
+    {
+      "method": "logistic",
+      "config": {
+        "C": 1
+      },
+      "validation": {
+        "n": 1629,
+        "precision": 0.9559859154929577,
+        "recall": 0.923469387755102,
+        "f1": 0.9394463667820069,
+        "fpr": 0.024015369836695485,
+        "tn": 1016,
+        "fp": 25,
+        "fn": 45,
+        "tp": 543
+      }
+    },
+    {
+      "method": "logistic",
+      "config": {
+        "C": 10
+      },
+      "validation": {
+        "n": 1629,
+        "precision": 0.9559859154929577,
+        "recall": 0.923469387755102,
+        "f1": 0.9394463667820069,
+        "fpr": 0.024015369836695485,
+        "tn": 1016,
+        "fp": 25,
+        "fn": 45,
+        "tp": 543
+      }
+    },
+    {
+      "method": "random_forest",
+      "config": {
+        "max_depth": 5,
+        "min_samples_leaf": 1
+      },
+      "validation": {
+        "n": 1629,
+        "precision": 0.9915397631133672,
+        "recall": 0.9965986394557823,
+        "f1": 0.9940627650551315,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 2,
+        "tp": 586
+      }
+    },
+    {
+      "method": "random_forest",
+      "config": {
+        "max_depth": 5,
+        "min_samples_leaf": 5
+      },
+      "validation": {
+        "n": 1629,
+        "precision": 0.9915254237288136,
+        "recall": 0.9948979591836735,
+        "f1": 0.9932088285229203,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 3,
+        "tp": 585
+      }
+    },
+    {
+      "method": "random_forest",
+      "config": {
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "validation": {
+        "n": 1629,
+        "precision": 0.9915110356536503,
+        "recall": 0.9931972789115646,
+        "f1": 0.9923534409515717,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 4,
+        "tp": 584
+      }
+    },
+    {
+      "method": "random_forest",
+      "config": {
+        "max_depth": null,
+        "min_samples_leaf": 5
+      },
+      "validation": {
+        "n": 1629,
+        "precision": 0.9915254237288136,
+        "recall": 0.9948979591836735,
+        "f1": 0.9932088285229203,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 3,
+        "tp": 585
+      }
+    }
+  ],
+  "selected": {
+    "light_rule": {
+      "threshold": 177.0383333333325,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9898819561551433,
+        "recall": 0.9982993197278912,
+        "f1": 0.9940728196443692,
+        "fpr": 0.005763688760806916,
+        "tn": 1035,
+        "fp": 6,
+        "fn": 1,
+        "tp": 587
+      }
+    },
+    "logistic": {
+      "config": {
+        "C": 1
+      },
+      "probability_threshold": 0.5,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9559859154929577,
+        "recall": 0.923469387755102,
+        "f1": 0.9394463667820069,
+        "fpr": 0.024015369836695485,
+        "tn": 1016,
+        "fp": 25,
+        "fn": 45,
+        "tp": 543
+      }
+    },
+    "random_forest": {
+      "config": {
+        "max_depth": 5,
+        "min_samples_leaf": 1
+      },
+      "probability_threshold": 0.5,
+      "validation": {
+        "n": 1629,
+        "precision": 0.9915397631133672,
+        "recall": 0.9965986394557823,
+        "f1": 0.9940627650551315,
+        "fpr": 0.004803073967339097,
+        "tn": 1036,
+        "fp": 5,
+        "fn": 2,
+        "tp": 586
+      }
+    }
+  },
+  "test_results": [
+    {
+      "dataset": "datatest.txt",
+      "method": "light_rule",
+      "n": 2665,
+      "precision": 0.9364161849710982,
+      "recall": 1.0,
+      "f1": 0.9671641791044776,
+      "fpr": 0.03898405197873597,
+      "tn": 1627,
+      "fp": 66,
+      "fn": 0,
+      "tp": 972
+    },
+    {
+      "dataset": "datatest.txt",
+      "method": "logistic",
+      "n": 2665,
+      "precision": 0.9470068694798822,
+      "recall": 0.992798353909465,
+      "f1": 0.9693621295831241,
+      "fpr": 0.0318960425280567,
+      "tn": 1639,
+      "fp": 54,
+      "fn": 7,
+      "tp": 965
+    },
+    {
+      "dataset": "datatest.txt",
+      "method": "random_forest",
+      "n": 2665,
+      "precision": 0.9461697722567288,
+      "recall": 0.9403292181069959,
+      "f1": 0.9432404540763674,
+      "fpr": 0.03071470761961016,
+      "tn": 1641,
+      "fp": 52,
+      "fn": 58,
+      "tp": 914
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "light_rule",
+      "n": 9752,
+      "precision": 0.8193832599118943,
+      "recall": 0.9985358711566618,
+      "f1": 0.9001319841619005,
+      "fpr": 0.05854861742178372,
+      "tn": 7252,
+      "fp": 451,
+      "fn": 3,
+      "tp": 2046
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "logistic",
+      "n": 9752,
+      "precision": 0.9741035856573705,
+      "recall": 0.9546120058565154,
+      "f1": 0.9642593049051023,
+      "fpr": 0.0067506166428664156,
+      "tn": 7651,
+      "fp": 52,
+      "fn": 93,
+      "tp": 1956
+    },
+    {
+      "dataset": "datatest2.txt",
+      "method": "random_forest",
+      "n": 9752,
+      "precision": 0.9647404505386875,
+      "recall": 0.961444607125427,
+      "f1": 0.9630897091175752,
+      "fpr": 0.009347007659353498,
+      "tn": 7631,
+      "fp": 72,
+      "fn": 79,
+      "tp": 1970
+    },
+    {
+      "dataset": "pooled",
+      "method": "light_rule",
+      "n": 12417,
+      "precision": 0.8537482319660538,
+      "recall": 0.9990069513406157,
+      "f1": 0.9206833435021354,
+      "fpr": 0.05502341421881652,
+      "tn": 8879,
+      "fp": 517,
+      "fn": 3,
+      "tp": 3018
+    },
+    {
+      "dataset": "pooled",
+      "method": "logistic",
+      "n": 12417,
+      "precision": 0.9649818301949125,
+      "recall": 0.966898378020523,
+      "f1": 0.9659391534391535,
+      "fpr": 0.011281396338867603,
+      "tn": 9290,
+      "fp": 106,
+      "fn": 100,
+      "tp": 2921
+    },
+    {
+      "dataset": "pooled",
+      "method": "random_forest",
+      "n": 12417,
+      "precision": 0.9587765957446809,
+      "recall": 0.9546507778881165,
+      "f1": 0.9567092386797147,
+      "fpr": 0.01319710515112814,
+      "tn": 9272,
+      "fp": 124,
+      "fn": 137,
+      "tp": 2884
+    }
+  ],
+  "elapsed_seconds": 1.9993804000041564
+}
