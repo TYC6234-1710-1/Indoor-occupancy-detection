@@ -1,0 +1,67 @@
+{
+  "datatraining.txt": {
+    "samples": 8143,
+    "start": "2015-02-04 17:51:00",
+    "end": "2015-02-10 09:33:00",
+    "occupied": 1729,
+    "occupied_ratio": 0.2123296082524868,
+    "missing_features": {
+      "Temperature": 0,
+      "Humidity": 0,
+      "Light": 0,
+      "CO2": 0,
+      "HumidityRatio": 0
+    },
+    "duplicate_timestamps": 0,
+    "interval_seconds_counts": {
+      "59.0": 1629,
+      "60.0": 4884,
+      "61.0": 1629
+    }
+  },
+  "datatest.txt": {
+    "samples": 2665,
+    "start": "2015-02-02 14:19:00",
+    "end": "2015-02-04 10:43:00",
+    "occupied": 972,
+    "occupied_ratio": 0.3647279549718574,
+    "missing_features": {
+      "Temperature": 0,
+      "Humidity": 0,
+      "Light": 0,
+      "CO2": 0,
+      "HumidityRatio": 0
+    },
+    "duplicate_timestamps": 0,
+    "interval_seconds_counts": {
+      "59.0": 534,
+      "60.0": 1596,
+      "61.0": 534
+    }
+  },
+  "datatest2.txt": {
+    "samples": 9752,
+    "start": "2015-02-11 14:48:00",
+    "end": "2015-02-18 09:19:00",
+    "occupied": 2049,
+    "occupied_ratio": 0.21011074651353567,
+    "missing_features": {
+      "Temperature": 0,
+      "Humidity": 0,
+      "Light": 0,
+      "CO2": 0,
+      "HumidityRatio": 0
+    },
+    "duplicate_timestamps": 0,
+    "interval_seconds_counts": {
+      "59.0": 1951,
+      "60.0": 5849,
+      "61.0": 1951
+    }
+  },
+  "training_split": {
+    "train": 6514,
+    "validation": 1629,
+    "rule": "sort by date; first floor(80% * n) train, remainder validation"
+  }
+}

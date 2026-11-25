@@ -1,0 +1,3 @@
+# Preserve original dataset bytes across operating systems.
+data/*.txt -text
+*.png binary

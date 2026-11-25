@@ -1,0 +1,111 @@
+{
+  "id": "14",
+  "name": "基于环境传感器的室内占用检测",
+  "checked_on": "2026-10-24",
+  "files": [
+    {
+      "file": "datatest.txt",
+      "bytes": 200766,
+      "sha256": "1b92c7c1b2838963464fa891a610cf3c5db4becb7189189b29b330107a584c7f",
+      "rows": 2665,
+      "columns": 7,
+      "header": [
+        "date",
+        "Temperature",
+        "Humidity",
+        "Light",
+        "CO2",
+        "HumidityRatio",
+        "Occupancy"
+      ],
+      "index_columns": 1,
+      "delimiter": ","
+    },
+    {
+      "file": "datatest2.txt",
+      "bytes": 699664,
+      "sha256": "d026d1bd5aeccd4aff4f3b3710d48e40613bd5fc370db7e61bbdcaa50d985095",
+      "rows": 9752,
+      "columns": 7,
+      "header": [
+        "date",
+        "Temperature",
+        "Humidity",
+        "Light",
+        "CO2",
+        "HumidityRatio",
+        "Occupancy"
+      ],
+      "index_columns": 1,
+      "delimiter": ","
+    },
+    {
+      "file": "datatraining.txt",
+      "bytes": 596674,
+      "sha256": "b2c4d0ce2b9e4e453c476f7125ef31aeec2d1f5c7f5572d0e80de3df6521ab56",
+      "rows": 8143,
+      "columns": 7,
+      "header": [
+        "date",
+        "Temperature",
+        "Humidity",
+        "Light",
+        "CO2",
+        "HumidityRatio",
+        "Occupancy"
+      ],
+      "index_columns": 1,
+      "delimiter": ","
+    },
+    {
+      "file": "occupancy.zip",
+      "bytes": 335713,
+      "sha256": "4ae3f46aa98eedff564a9f6924d1635173e2fd2c816004342a9be93076d3a81a",
+      "archive_integrity": "CRC通过"
+    }
+  ],
+  "details": {
+    "date_ranges": {
+      "datatraining.txt": [
+        "2015-02-04 17:51:00",
+        "2015-02-10 09:33:00"
+      ],
+      "datatest.txt": [
+        "2015-02-02 14:19:00",
+        "2015-02-04 10:43:00"
+      ],
+      "datatest2.txt": [
+        "2015-02-11 14:48:00",
+        "2015-02-18 09:19:00"
+      ]
+    },
+    "label_counts_by_file": {
+      "datatraining.txt": {
+        "0": 6414,
+        "1": 1729
+      },
+      "datatest.txt": {
+        "0": 1693,
+        "1": 972
+      },
+      "datatest2.txt": {
+        "0": 7703,
+        "1": 2049
+      }
+    },
+    "total_rows": 20560
+  },
+  "quality_note": "官方训练时段为2015-02-04 17:51至02-10 09:33；测试1为02-02 14:19至02-04 10:43，早于训练；测试2为02-11 14:48至02-18 09:19，晚于训练。两个测试分别评价，不能均表述为未来预测。TXT每行另有原始索引，七个具名字段中包含目标Occupancy。",
+  "download_sources": [
+    {
+      "id": "14",
+      "file": "occupancy.zip",
+      "url": "https://archive.ics.uci.edu/static/public/357/occupancy+detection.zip",
+      "sub": "data",
+      "status": "downloaded",
+      "bytes": 335713,
+      "sha256": "4ae3f46aa98eedff564a9f6924d1635173e2fd2c816004342a9be93076d3a81a",
+      "local": "14 基于环境传感器的室内占用检测/data/occupancy.zip"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+数据：基于环境传感器的室内占用检测
+
+来源：https://archive.ics.uci.edu/dataset/357/occupancy+detection
+
+署名：Candanedo, L. (2016). Occupancy Detection. UCI. DOI: 10.24432/C5X01N.
+
+许可：CC BY 4.0
+
+许可链接：https://creativecommons.org/licenses/by/4.0/
+
+使用条件：署名并保留许可及修改声明。
